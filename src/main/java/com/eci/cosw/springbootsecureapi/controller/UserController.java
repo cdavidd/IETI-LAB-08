@@ -41,7 +41,7 @@ public class UserController
         String password = login.getPassword();
 
         //TODO implement logic to verify user credentials
-        User user = userService.getUser( 0l );
+        User user = userService.findUserByEmail(login.getEmail());
 
         if ( user == null )
         {
